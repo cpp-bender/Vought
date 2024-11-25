@@ -40,3 +40,40 @@ img{
 .section-padding{
     padding: 0 10rem;
 }
+
+/*Navbar*/
+.navbar{
+    box-shadow: var(--box-shadow);
+}
+
+
+.navbar-nav .nav-link{
+    font-weight: 500;
+    color: var(--c-dark);
+}
+
+.navbar-nav .nav-link:active{
+    color: var(--c-brand);
+}
+
+/* Button */
+
+.btn{
+    font-weight: 600;
+    font-size: .75rem;
+    text-transform: uppercase;
+    border-radius: 0;
+    padding: .5rem 1rem;
+}
+
+.btn-brand{
+    background-color: var(--c-brand);
+    border-color: var(--c-brand);
+    color: #fff;
+}
+
+.btn-brand:hover{
+    background-color: var(--c-brand-light);
+    border-color: var(--c-brand-light);
+    color: #fff;
+}
