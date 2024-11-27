@@ -88,7 +88,7 @@ img{
 
 /* Hero */
 #hero{
-    background: linear-gradient(rgba(var(--c-brand-rgb),.5),rgba(0,0,0,0.45)), url(../images/hero-1.jpg);
+    background: linear-gradient(rgba(var(--c-brand-rgb),.5), rgba(var(--c-brand-rgb),0.3)), url(../images/hero-1.jpg);
     background-position: center;
     background-size: cover;
 }
@@ -157,4 +157,13 @@ img{
 .service:hover .iconbox{
     color: #fff;
     background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Counter */
+
+#counter{
+    background: linear-gradient(rgba(var(--c-brand-rgb),.8),rgba(var(--c-brand-rgb),.8)), url(../images/counter.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 35rem;
 }
