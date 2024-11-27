@@ -165,5 +165,4 @@ img{
     background: linear-gradient(rgba(var(--c-brand-rgb),.8),rgba(var(--c-brand-rgb),.8)), url(../images/counter.jpg);
     background-position: center;
     background-size: cover;
-    height: 35rem;
 }
