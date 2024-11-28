@@ -1,168 +1,219 @@
 @import url(../css/clash-display.css);
 
-:root{
-    --c-dark: #212529;
-    --c-brand: #4e57d4;
-    --c-brand-light: #6970dd;
-    --c-brand-rgb: 78, 87, 212;
-    --c-body: #727272;
-    --font-base: "ClashDisplay", sans-serif;
-    --box-shadow: 0px 15px 25px rgba(0,0,0,0.1);
-    --transition: all .5s ease;
-    --z-index-back: -1;
-    --z-index-mid : 0;
-    --z-index-front: 1;
+:root {
+  --c-dark: #212529;
+  --c-brand: #4e57d4;
+  --c-brand-light: #6970dd;
+  --c-brand-rgb: 78, 87, 212;
+  --c-body: #727272;
+  --font-base: "ClashDisplay", sans-serif;
+  --box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.1);
+  --transition: all 0.5s ease;
+  --z-index-back: -1;
+  --z-index-mid: 0;
+  --z-index-front: 1;
 }
 
-body{
-    font-family: var(--font-base);
-    line-height: 1.7;
-    color: var(--c-body);
+body {
+  font-family: var(--font-base);
+  line-height: 1.7;
+  color: var(--c-body);
 }
 
-h1, h2, h3, h4, h5, h6,
-.h1, .h2, .h3, .h4, .h5, .h6{
-    font-weight: 600;
-    color: var(--c-dark);
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  font-weight: 600;
+  color: var(--c-dark);
 }
 
-a{
-    text-decoration: none;
-    color: var(--c-brand);
-    transition: var(--transition);
+a {
+  text-decoration: none;
+  color: var(--c-brand);
+  transition: var(--transition);
 }
 
-a:hover{
-    color: var(--c-brand-light);
+a:hover {
+  color: var(--c-brand-light);
 }
 
-img{
-    max-width: 100%;
-    height: auto;
+img {
+  max-width: 100%;
+  height: auto;
 }
 
-.section-padding{
-    padding: 9rem 0;
+.section-padding {
+  padding: 9rem 0;
 }
 
-.theme-shadow{
-    box-shadow: var(--box-shadow);
+.theme-shadow {
+  box-shadow: var(--box-shadow);
+}
+
+/* Image Zoom */
+.image-zoom {
+  position: relative;
+}
+
+.image-zoom-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.image-zoom-wrapper img {
+  transition: var(--transition);
+}
+
+.image-zoom:hover .image-zoom-wrapper img {
+  transform: scale(1.1);
 }
 
 /*Navbar*/
-.navbar{
-    box-shadow: var(--box-shadow);
+.navbar {
+  box-shadow: var(--box-shadow);
 }
 
-
-.navbar-nav .nav-link{
-    font-weight: 500;
-    color: var(--c-dark);
+.navbar-nav .nav-link {
+  font-weight: 500;
+  color: var(--c-dark);
 }
 
-.navbar-nav .nav-link:active{
-    color: var(--c-brand);
+.navbar-nav .nav-link:active {
+  color: var(--c-brand);
 }
 
 /* Button */
 
-.btn{
-    font-weight: 600;
-    font-size: .75rem;
-    text-transform: uppercase;
-    border-radius: 0;
-    padding: .5rem 1rem;
+.btn {
+  font-weight: 600;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  border-radius: 0;
+  padding: 0.5rem 1rem;
 }
 
-.btn-brand{
-    background-color: var(--c-brand);
-    border-color: var(--c-brand);
-    color: #fff;
+.btn-brand {
+  background-color: var(--c-brand);
+  border-color: var(--c-brand);
+  color: #fff;
 }
 
-.btn-brand:hover{
-    background-color: var(--c-brand-light);
-    border-color: var(--c-brand-light);
-    color: #fff;
+.btn-brand:hover {
+  background-color: var(--c-brand-light);
+  border-color: var(--c-brand-light);
+  color: #fff;
 }
 
 /* Hero */
-#hero{
-    background: linear-gradient(rgba(var(--c-brand-rgb),.5), rgba(var(--c-brand-rgb),0.3)), url(../images/hero-1.jpg);
-    background-position: center;
-    background-size: cover;
+#hero {
+  background: linear-gradient(
+      rgba(var(--c-brand-rgb), 0.5),
+      rgba(var(--c-brand-rgb), 0.3)
+    ),
+    url(../images/hero-1.jpg);
+  background-position: center;
+  background-size: cover;
 }
 
 /* Section title */
-.section-title{
-    margin-bottom: 3rem;
+.section-title {
+  margin-bottom: 3rem;
 }
 
-.section-title .line{
-    width: 5rem;
-    height: .25rem;
-    background-color: var(--c-brand);
-    margin: 1rem auto;
+.section-title .line {
+  width: 5rem;
+  height: 0.25rem;
+  background-color: var(--c-brand);
+  margin: 1rem auto;
 }
 
-.section-title p{
-    max-width: 30rem;
-    margin: 0 auto;
+.section-title p {
+  max-width: 30rem;
+  margin: 0 auto;
 }
 
 /* Iconbox */
-.iconbox{
-    width: 4rem;
-    height: 4rem;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    background: rgba(var(--c-brand-rgb), 0.1);
-    color: var(--c-brand);
-    font-size: 2rem;
-    flex: none;
+.iconbox {
+  width: 4rem;
+  height: 4rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(var(--c-brand-rgb), 0.1);
+  color: var(--c-brand);
+  font-size: 2rem;
+  flex: none;
 }
 
 /* Services */
 
-.service{
-    position: relative;
-    overflow: hidden;
-    z-index: var(--z-index-front);
+.service {
+  position: relative;
+  overflow: hidden;
+  z-index: var(--z-index-front);
 }
 
-.service::after{
-    content: "";
-    width: 40px;
-    height: 40px;
-    background: rgba(var(--c-brand-rgb), 0.2);
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    transition: var(--transition);
+.service::after {
+  content: "";
+  width: 40px;
+  height: 40px;
+  background: rgba(var(--c-brand-rgb), 0.2);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: var(--transition);
 }
 
-.service:hover::after{
-    width: 100%;
-    height: 100%;
-    background: var(--c-brand);
-    z-index: var(--z-index-back);
+.service:hover::after {
+  width: 100%;
+  height: 100%;
+  background: var(--c-brand);
+  z-index: var(--z-index-back);
 }
 
 .service:hover h5,
-.service:hover p{
-    color: #fff;
+.service:hover p {
+  color: #fff;
 }
 
-.service:hover .iconbox{
-    color: #fff;
-    background-color: rgba(255, 255, 255, 0.2);
+.service:hover .iconbox {
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
 /* Counter */
 
-#counter{
-    background: linear-gradient(rgba(var(--c-brand-rgb),.8),rgba(var(--c-brand-rgb),.8)), url(../images/counter.jpg);
-    background-position: center;
-    background-size: cover;
+#counter {
+  background: linear-gradient(
+      rgba(var(--c-brand-rgb), 0.8),
+      rgba(var(--c-brand-rgb), 0.8)
+    ),
+    url(../images/counter.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+/* Portfolio */
+.portfolio-item .iconbox {
+  background-color: var(--c-brand);
+  color: #fff;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+}
+
+.portfolio-item:hover .iconbox {
+  opacity: 1;
+  top: 50%;
 }
