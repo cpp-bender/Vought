@@ -238,3 +238,19 @@ img {
     text-transform: uppercase;
     color: var(--c-brand);
 }
+
+/* Team */
+
+.team-member-content{
+    background-color: var(--c-brand);
+    position: absolute;
+    width: 50%;
+    bottom: -10%;
+    opacity: 0;
+    transition: var(--transition);
+}
+
+.team-member:hover .team-member-content{
+    bottom: 0;
+    opacity: 1;
+}
