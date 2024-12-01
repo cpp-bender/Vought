@@ -80,11 +80,12 @@ img {
 /*Navbar*/
 .navbar {
   box-shadow: var(--box-shadow);
+
 }
 
 .navbar-nav .nav-link {
   font-weight: 500;
-  color: var(--c-dark);
+  color: var(--c-brand);
 }
 
 .navbar-nav .nav-link:active {
@@ -219,72 +220,122 @@ img {
 }
 
 /* Review */
-.review-head{
-    position: relative;
+.review-head {
+  position: relative;
 }
 
-.review-head::after{
-    content: "";
-    width: 2rem;
-    height: 2rem;
-    bottom: -.4rem;
-    transform: rotate(45deg);
-    background-color: white;
-    position: absolute;
+.review-head::after {
+  content: "";
+  width: 2rem;
+  height: 2rem;
+  bottom: -0.4rem;
+  transform: rotate(45deg);
+  background-color: white;
+  position: absolute;
 }
 
-.review small{
-    font-weight: 600;
-    text-transform: uppercase;
-    color: var(--c-brand);
+.review small {
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--c-brand);
 }
 
 /* Team */
 
-.team-member-content{
-    background-color: var(--c-brand);
-    position: absolute;
-    width: 50%;
-    bottom: -10%;
-    opacity: 0;
-    transition: var(--transition);
+.team-member-content {
+  background-color: var(--c-brand);
+  position: absolute;
+  width: 50%;
+  bottom: -10%;
+  opacity: 0;
+  transition: var(--transition);
 }
 
-.team-member:hover .team-member-content{
-    bottom: 0;
-    opacity: 1;
+.team-member:hover .team-member-content {
+  bottom: 0;
+  opacity: 1;
 }
-
 
 /* Contact */
 
-#contact{
-    position: relative;
-    z-index: var(--z-index-front);
+#contact {
+  position: relative;
+  z-index: var(--z-index-front);
 }
 
-#contact::after{
-    content: "";
-    width: 100%;
-    height: 70%;
-    position: absolute;
-    background: linear-gradient(
-        rgba(var(--c-brand-rgb), 0.8),
-        rgba(var(--c-brand-rgb), 0.8)
-      ),
-      url(../images/counter.jpg);
-    background-position: center;
-    background-size: cover;
-    top: 0;
-    left: 0;
-    z-index: var(--z-index-back);
+#contact::after {
+  content: "";
+  width: 100%;
+  height: 70%;
+  position: absolute;
+  background: linear-gradient(
+      rgba(var(--c-brand-rgb), 0.8),
+      rgba(var(--c-brand-rgb), 0.8)
+    ),
+    url(../images/counter.jpg);
+  background-position: center;
+  background-size: cover;
+  top: 0;
+  left: 0;
+  z-index: var(--z-index-back);
 }
 
-#contact .form-control{
-    border-radius: 0;
+#contact .form-control {
+  border-radius: 0;
 }
 
-#contact .form-control:focus{
-    box-shadow: none;
-    border-color: var(--c-brand);
+#contact .form-control:focus {
+  box-shadow: none;
+  border-color: var(--c-brand);
+}
+
+/* Footer */
+
+footer{
+  padding-top: 5rem;
+}
+
+.footer-top{
+  padding-bottom: 3rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-bottom{
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+footer li,
+footer p,
+footer a {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+footer .line {
+  width: 3rem;
+  height: 0.25rem;
+  background-color: var(--c-brand);
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.social-icons a{
+  width: 3rem;
+  height: 3rem;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10rem;
+  margin-left: 1rem;
+}
+
+.social-icons a:hover {
+  background-color: var(--c-brand);
+  color: #fff;
 }
